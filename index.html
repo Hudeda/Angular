@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html ng-app="myDog">
+  <head>
+      <link rel= "stylesheet" href = "style.css">
+  </head>
+  <body class="list-group" ng-controller="DogController as dog">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-route.min.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+        
+    <header>
+      <h1 class="text-center">הכלבים שלי</h1>
+      <h2 class="text-center">- הכלבים האהובים שלי -</h2>
+    </header>
+      <nav ng-init = "tab = 1">
+        <button ng-click="tab = 1">שרפיי</button>
+        <button ng-click="tab = 2">אלסקן מלמוט</button>
+        <button ng-click="tab = 3">קאנה קורסו</button>
+        <button ng-click="tab = 4">אקיטה אינו</button>
+      </nav>
+      {{tab}}
+      <main> 
+            <div ng-show="tab === 1"><a href =https://he.wikipedia.org/wiki/%D7%A9%D7%A8-%D7%A4%D7%99%D7%99>קצת עליי<br><img ng-src = "{{dog.products[0].image}}"></div>
+            <div ng-show="tab === 2"><a href =https://he.wikipedia.org/wiki/%D7%90%D7%9C%D7%A1%D7%A7%D7%9F_%D7%9E%D7%9C%D7%9E%D7%95%D7%98>קצת עליי<br><img ng-src = "{{dog.products[1].image}}"></div>
+            <div ng-show="tab === 3"><a href =https://he.wikipedia.org/wiki/%D7%A7%D7%90%D7%A0%D7%94_%D7%A7%D7%95%D7%A8%D7%A1%D7%95>קצת עליי<br><img ng-src = "{{dog.products[2].image}}"></div>
+            <div ng-show="tab === 4"><a href =https://en.wikipedia.org/wiki/Akita_(dog)>קצת עליי<br><img ng-src = "{{dog.products[3].image}}"></div>
+      </main>
+    
+    
+    </div>
+  </body>
+</html>
